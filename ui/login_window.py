@@ -24,6 +24,7 @@ def open_login_window(mode):
         if check_login(idi.strip(), password.strip()):
             messagebox.showinfo("Success", "Connexion réussie")
             mode.set("Mode: Admin")
+            login.destroy()
         else:
             messagebox.showerror("Error", "Identifiant ou mot de passe incorrect")
             mode.set("Mode: User")
@@ -31,5 +32,4 @@ def open_login_window(mode):
     login_b = Button(login, text="Se connecter", command=check_credentials)
     login_b.pack()
 
-    mode_label = Label(login, textvariable=mode)
-    mode_label.pack()
+    login.mainloop()

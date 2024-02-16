@@ -10,3 +10,7 @@ def connect_db():
         cursor.execute("INSERT INTO users (id, password) VALUES ('root','rouviere')")
         conn.commit()
     return conn
+
+def get_all_databases():
+    # Remplacez cette ligne par le code nécessaire pour récupérer toutes les bases de données
+    return ["database1", "database2", "database3"]
